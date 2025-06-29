@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🧠 Smart Image Classifier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- TensorFlow.js and MobileNet -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0"></script>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🧠 Smart Image Classifier</h1>
+
+  <div class="upload-area" onclick="fileInput.click()" ondragover="event.preventDefault()" ondrop="handleDrop(event)">
+    <p>📤 Click or drag an image to upload</p>
+    <input type="file" accept="image/*" id="fileInput" style="display:none;" onchange="handleFile(event)">
+  </div>
+
+  <img id="input-image" />
+  <div id="status"></div>
+  <div id="results"></div>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
